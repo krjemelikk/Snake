@@ -5,9 +5,9 @@ namespace Snake
 {
     public class Game
     {
-        public InputControl InputControl { get; set; }
-        public Canvas Canvas { get; set; }
-        public Field Field { get; set; }
+        public InputControl InputControl { get; private set; }
+        public Canvas Canvas { get; private set; }
+        public Field Field { get; private set; }
 
         private int _frameTime;
         private bool _isFinished;

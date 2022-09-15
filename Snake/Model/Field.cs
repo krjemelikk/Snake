@@ -5,12 +5,12 @@ namespace Snake.Model
 {
     public class Field
     {
-        public int Width { get; set; }
-        public int Height { get; set; }
-        public int EmptyPositionsCount { get; set; }
-        public Snake Snake { get; set; }
-        public Food Food { get; set; }
-        public Border Border { get; set; }
+        public int Width { get; private set; }
+        public int Height { get; private set; }
+        public int EmptyPositionsCount { get; private set; }
+        public Snake Snake { get; private set; }
+        public Food Food { get; private set; }
+        public Border Border { get; private set; }
 
         public event Action OnSnakeEat;
         public event Action OnSnakeDeath;
