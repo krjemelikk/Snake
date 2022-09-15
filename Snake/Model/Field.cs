@@ -19,7 +19,7 @@ namespace Snake.Model
 
         private readonly Random _random;
 
-        public Field() : this(24,24){}
+        public Field() : this(30,30){}
 
         public Field(int width, int height)
         {

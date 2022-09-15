@@ -12,7 +12,7 @@ namespace Snake
         public int Width { get; set; }
         public int Height { get; set; }
 
-        public Canvas() : this(24, 26){}
+        public Canvas() : this(30, 30){}
         public Canvas(int width,int height)
         {
             Console.Clear();
