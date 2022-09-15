@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Snake.Model;
+﻿using Snake.Model;
+using System;
 
 namespace Snake
 {

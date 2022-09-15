@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Snake.Model;
+using System;
 using System.Threading;
-using Snake.Model;
 namespace Snake
 {
     public class Game

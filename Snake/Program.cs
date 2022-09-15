@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Snake
+﻿namespace Snake
 {
     class Program
     {
@@ -8,7 +6,6 @@ namespace Snake
         {
             var game = new Game();
             game.Run();
-
         }
     }
 }

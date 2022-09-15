@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 
 namespace Snake.Model
 {
@@ -12,7 +10,6 @@ namespace Snake.Model
         public Direction? CurrentDirection { get; set; }
         public LinkedList<Position> Body { get; set; }
         public ConsoleColor Color { get; set; } = ConsoleColor.Green;
-
         public Position DeletedPos { get; set; }
 
         public Action Eat;
@@ -24,10 +21,7 @@ namespace Snake.Model
 
             Body = new LinkedList<Position>();
             for (int i = 0; i < Length; i++)
-            {
                 Body.AddFirst(new Position(position.X - i,position.Y));
-            }
-
 
             Eat = EatFood;
         }
@@ -86,7 +80,6 @@ namespace Snake.Model
             var snakeHead = Body.First.Value;
             return Body.Skip(1).Any(pos => pos.Equals(snakeHead));
         }
-
 
         public IEnumerable<Position> GetPositions()
         { 
