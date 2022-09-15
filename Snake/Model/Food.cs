@@ -5,7 +5,7 @@ namespace Snake.Model
 {
     public class Food : IDrawable
     {
-        public Position Position { get; set; }
+        public Position Position { get; private set; }
         public ConsoleColor Color { get; set; } = ConsoleColor.Red;
         public Food(Position position)
         {

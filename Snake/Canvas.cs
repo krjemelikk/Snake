@@ -7,8 +7,8 @@ namespace Snake
     {
         private const char Pixel = 'o';
         private const char EmptyPixel = ' ';
-        public int Width { get; set; }
-        public int Height { get; set; }
+        public int Width { get; private set; }
+        public int Height { get; private set; }
 
         public Canvas() : this(30, 30){}
         public Canvas(int width,int height)
@@ -17,6 +17,9 @@ namespace Snake
             Console.SetWindowSize(width, height);
             Console.SetBufferSize(width, height);
             Console.CursorVisible = false;
+
+            Width = width;
+            Height = height;
         }
 
         public void DrawObject(IDrawable obj)

@@ -5,7 +5,7 @@ namespace Snake.Model
 {
     public class Border : IDrawable
     {
-        public HashSet<Position> BorderPositions { get; set; }
+        public HashSet<Position> BorderPositions { get; private set; }
         public ConsoleColor Color { get; set; } = ConsoleColor.White;
         public Border(int width, int height)
         {
@@ -33,7 +33,8 @@ namespace Snake.Model
 
         public IEnumerable<Position> GetPositions()
         {
-            return BorderPositions;
+            foreach (var pos in BorderPositions)
+                yield return pos;
         }
     }
 }

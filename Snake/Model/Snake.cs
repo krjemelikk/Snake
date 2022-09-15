@@ -6,11 +6,11 @@ namespace Snake.Model
 {
     public class Snake : IDrawable
     {
-        public int Length { get; set; }
-        public Direction? CurrentDirection { get; set; }
-        public LinkedList<Position> Body { get; set; }
+        public int Length { get; private set; }
+        public Direction? CurrentDirection { get; private set; }
+        public LinkedList<Position> Body { get; private set; }
         public ConsoleColor Color { get; set; } = ConsoleColor.Green;
-        public Position DeletedPos { get; set; }
+        public Position DeletedPos { get; private set; }
 
         public Action Eat;
 
@@ -82,8 +82,9 @@ namespace Snake.Model
         }
 
         public IEnumerable<Position> GetPositions()
-        { 
-            return Body;
+        {
+            foreach (var pos in Body)
+                yield return pos;
         }
     }
 }
