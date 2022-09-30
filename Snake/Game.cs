@@ -34,10 +34,10 @@ namespace Snake
             Canvas.DrawObject(Field.Border);
             Canvas.DrawObject(Field.Snake);
             Canvas.DrawObject(Field.Food);
+            Direction? dir = null;
 
             while (!_isFinished)
             {
-                Direction? dir = null;
                 if (Console.KeyAvailable)
                     dir = InputControl.GetCurrentDirection(Console.ReadKey(true).Key);
 
