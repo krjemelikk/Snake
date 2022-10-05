@@ -21,7 +21,7 @@ namespace Snake.Model
 
             Body = new LinkedList<Position>();
             for (int i = 0; i < Length; i++)
-                Body.AddFirst(new Position(position.X - i,position.Y));
+                Body.AddLast(new Position(position.X - i,position.Y));
 
             Eat = EatFood;
         }
